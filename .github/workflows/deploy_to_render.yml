@@ -14,7 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Start Server
-        run: npm run build && npm run start
+        run: npm run start &
+      - name: Wait...
+        run: sleep 10
       - name: Test
         run: |
           npm install
